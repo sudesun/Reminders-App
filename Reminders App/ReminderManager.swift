@@ -14,7 +14,7 @@ class ReminderManager {
     func scheduleNotification(for reminderItem: ReminderItem) {
         
         let content = UNMutableNotificationContent()
-        content.title = reminderItem.name ?? "Hatırlatıcı"
+        content.title = reminderItem.name ?? "Hatırlatıcı "
         
         if let desc = reminderItem.desc, !desc.isEmpty {
             content.body = desc

@@ -31,6 +31,7 @@ struct CheckBoxView: View {
                     dateHolder.saveContext(viewContext)
                 }
             }
+        
     }
 }
 

@@ -20,7 +20,7 @@ struct Reminders_AppApp: App {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge] ) { granted, error in
         
             if granted {
-                print ("Bildirim izni verildi.")
+                print ("Bildirim izni verildi")
             } else if let error = error {
                 print ("Bildirim izni hatası: \(error.localizedDescription)")
             }

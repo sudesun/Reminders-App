@@ -2,7 +2,6 @@
 //  Persistence.swift
 //  Reminders App
 //
-//
 
 import CoreData
 

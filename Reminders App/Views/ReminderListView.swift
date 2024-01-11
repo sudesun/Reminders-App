@@ -36,11 +36,11 @@ struct ReminderListView: View {
                         .onDelete(perform: deleteItems)
                     }
                     .toolbar {
-#if os(iOS)
+
                         ToolbarItem(placement: .navigationBarTrailing) {
                             EditButton()
                         }
-#endif
+
                     }
                     
                     FloatingButton()

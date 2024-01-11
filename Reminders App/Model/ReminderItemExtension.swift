@@ -2,7 +2,6 @@
 //  ReminderItemExtension.swift
 //  Reminders App
 //
-//
 
 import SwiftUI
 

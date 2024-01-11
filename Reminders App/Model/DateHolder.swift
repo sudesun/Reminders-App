@@ -2,7 +2,6 @@
 //  DateHolder.swift
 //  Reminders App
 //
-//
 
 import SwiftUI
 import CoreData

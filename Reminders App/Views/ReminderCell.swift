@@ -19,7 +19,7 @@ struct ReminderCell: View {
                 .environmentObject(dateHolder)
             
             VStack(alignment: .leading){
-                Text(passedReminderItem.name ?? "")
+                Text(passedReminderItem.name ??  "")
                     .padding(.horizontal)
                 
                 

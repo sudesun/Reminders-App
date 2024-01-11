@@ -41,7 +41,7 @@ struct ReminderEditView: View {
         
         Form{
             
-            Section(header: Text("Reminder")){
+            Section(header: Text("Reminder ")){
                 
                 TextField("Reminder Name", text: $name)
                 TextField("Desc", text: $desc)
