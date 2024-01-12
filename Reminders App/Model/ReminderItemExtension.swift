@@ -29,6 +29,7 @@ extension ReminderItem{
         return isOverdue() ? .red : .black
     }
     
+    
     func dueDateTimeOnly() -> String{
         
         if let due = dueDate{
@@ -41,5 +42,6 @@ extension ReminderItem{
         
         return ""
     }
+    
     
 }

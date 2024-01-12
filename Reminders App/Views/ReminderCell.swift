@@ -5,11 +5,13 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ReminderCell: View {
     
     @EnvironmentObject var dateHolder: DateHolder
     @ObservedObject var passedReminderItem: ReminderItem
+
     
     var body: some View {
         
@@ -21,6 +23,7 @@ struct ReminderCell: View {
             VStack(alignment: .leading){
                 Text(passedReminderItem.name ??  "")
                     .padding(.horizontal)
+                   
                 
                 
                 if let desc = passedReminderItem.desc, !desc.isEmpty {
