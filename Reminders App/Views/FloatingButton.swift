@@ -6,6 +6,7 @@
 
 import SwiftUI
 
+// FloatingButton struct'ı, yeni hatırlatıcı ekranına yönlendiren kayan bir düğmeyi temsil eder. (+new Reminder)
 struct FloatingButton: View {
     
     @EnvironmentObject var dateHolder: DateHolder
@@ -18,6 +19,7 @@ struct FloatingButton: View {
             HStack {
                 
                 Spacer()
+                 // Yeni hatırlatıcı ekranına yönlendiren NavigationLink
                 NavigationLink(destination: ReminderEditView(passedReminderItem: nil, initialDate: Date()).environmentObject(dateHolder)){
                    
                     Text("+ New Reminder")

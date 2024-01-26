@@ -11,7 +11,8 @@
 		45195F482B4E082A0042B8AA /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45195F472B4E082A0042B8AA /* CheckBoxView.swift */; };
 		45195F4B2B4E09DA0042B8AA /* ReminderItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45195F4A2B4E09DA0042B8AA /* ReminderItemExtension.swift */; };
 		45195F4D2B4E13470042B8AA /* ReminderFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45195F4C2B4E13470042B8AA /* ReminderFilter.swift */; };
-		45195F512B4E2B110042B8AA /* ReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45195F502B4E2B110042B8AA /* ReminderManager.swift */; };
+		45C65D3B2B4F5FC300F166BC /* ReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C65D3A2B4F5FC300F166BC /* ReminderManager.swift */; };
+		45C65D3D2B5071CA00F166BC /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C65D3C2B5071CA00F166BC /* MotionManager.swift */; };
 		45C76B9A2B4DD94000B94177 /* Reminders_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C76B992B4DD94000B94177 /* Reminders_AppApp.swift */; };
 		45C76B9C2B4DD94000B94177 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C76B9B2B4DD94000B94177 /* Persistence.swift */; };
 		45C76B9F2B4DD94000B94177 /* Reminders_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45C76B9D2B4DD94000B94177 /* Reminders_App.xcdatamodeld */; };
@@ -21,6 +22,12 @@
 		45C76BAF2B4DDDE800B94177 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C76BAE2B4DDDE800B94177 /* FloatingButton.swift */; };
 		45C76BB22B4DDEC900B94177 /* ReminderEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C76BB12B4DDEC900B94177 /* ReminderEditView.swift */; };
 		45C76BB42B4DFA0B00B94177 /* DateHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C76BB32B4DFA0B00B94177 /* DateHolder.swift */; };
+		E3B185392B62B4B6008AE81D /* Astronaut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3B185362B62B4B6008AE81D /* Astronaut.mp3 */; };
+		E3B1853A2B62B4B6008AE81D /* Huawei.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3B185372B62B4B6008AE81D /* Huawei.mp3 */; };
+		E3B1853B2B62B4B6008AE81D /* Poco.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3B185382B62B4B6008AE81D /* Poco.mp3 */; };
+		E3B1853F2B62B4EC008AE81D /* Poco.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3B1853C2B62B4EC008AE81D /* Poco.mp3 */; };
+		E3B185402B62B4EC008AE81D /* Huawei.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3B1853D2B62B4EC008AE81D /* Huawei.mp3 */; };
+		E3B185412B62B4EC008AE81D /* Astronaut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3B1853E2B62B4EC008AE81D /* Astronaut.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +35,8 @@
 		45195F472B4E082A0042B8AA /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		45195F4A2B4E09DA0042B8AA /* ReminderItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderItemExtension.swift; sourceTree = "<group>"; };
 		45195F4C2B4E13470042B8AA /* ReminderFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderFilter.swift; sourceTree = "<group>"; };
-		45195F502B4E2B110042B8AA /* ReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderManager.swift; sourceTree = "<group>"; };
+		45C65D3A2B4F5FC300F166BC /* ReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderManager.swift; sourceTree = "<group>"; };
+		45C65D3C2B5071CA00F166BC /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		45C76B962B4DD94000B94177 /* Reminders App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reminders App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C76B992B4DD94000B94177 /* Reminders_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders_AppApp.swift; sourceTree = "<group>"; };
 		45C76B9B2B4DD94000B94177 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -41,6 +49,15 @@
 		45C76BAE2B4DDDE800B94177 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		45C76BB12B4DDEC900B94177 /* ReminderEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEditView.swift; sourceTree = "<group>"; };
 		45C76BB32B4DFA0B00B94177 /* DateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHolder.swift; sourceTree = "<group>"; };
+		E3B185362B62B4B6008AE81D /* Astronaut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Astronaut.mp3; path = ../../../../Downloads/Astronaut.mp3; sourceTree = "<group>"; };
+		E3B185372B62B4B6008AE81D /* Huawei.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Huawei.mp3; path = ../../../../Downloads/Huawei.mp3; sourceTree = "<group>"; };
+		E3B185382B62B4B6008AE81D /* Poco.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Poco.mp3; path = ../../../../Downloads/Poco.mp3; sourceTree = "<group>"; };
+		E3B1853C2B62B4EC008AE81D /* Poco.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Poco.mp3; path = ../../../Downloads/Poco.mp3; sourceTree = "<group>"; };
+		E3B1853D2B62B4EC008AE81D /* Huawei.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Huawei.mp3; path = ../../../Downloads/Huawei.mp3; sourceTree = "<group>"; };
+		E3B1853E2B62B4EC008AE81D /* Astronaut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Astronaut.mp3; path = ../../../Downloads/Astronaut.mp3; sourceTree = "<group>"; };
+		E3B185432B62EC63008AE81D /* Astronaut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Astronaut.mp3; sourceTree = "<group>"; };
+		E3B185442B62EC6C008AE81D /* Huawei.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Huawei.mp3; sourceTree = "<group>"; };
+		E3B185452B62EC70008AE81D /* Poco.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Poco.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +74,9 @@
 		45195F492B4E097E0042B8AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E3B185432B62EC63008AE81D /* Astronaut.mp3 */,
+				E3B185442B62EC6C008AE81D /* Huawei.mp3 */,
+				E3B185452B62EC70008AE81D /* Poco.mp3 */,
 				45C76BB32B4DFA0B00B94177 /* DateHolder.swift */,
 				45C76B9B2B4DD94000B94177 /* Persistence.swift */,
 				45195F4A2B4E09DA0042B8AA /* ReminderItemExtension.swift */,
@@ -84,6 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				45C76B992B4DD94000B94177 /* Reminders_AppApp.swift */,
+				E3B1853E2B62B4EC008AE81D /* Astronaut.mp3 */,
+				E3B1853D2B62B4EC008AE81D /* Huawei.mp3 */,
+				E3B1853C2B62B4EC008AE81D /* Poco.mp3 */,
+				45C65D3A2B4F5FC300F166BC /* ReminderManager.swift */,
+				45C65D3C2B5071CA00F166BC /* MotionManager.swift */,
 				45C76BB02B4DDE4500B94177 /* Views */,
 				45195F492B4E097E0042B8AA /* Model */,
 				45C76BA22B4DD94000B94177 /* Assets.xcassets */,
@@ -91,7 +116,6 @@
 				45C76BA82B4DD94000B94177 /* Info.plist */,
 				45C76B9D2B4DD94000B94177 /* Reminders_App.xcdatamodeld */,
 				45C76BA52B4DD94000B94177 /* Preview Content */,
-				45195F502B4E2B110042B8AA /* ReminderManager.swift */,
 			);
 			path = "Reminders App";
 			sourceTree = "<group>";
@@ -99,6 +123,9 @@
 		45C76BA52B4DD94000B94177 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				E3B185362B62B4B6008AE81D /* Astronaut.mp3 */,
+				E3B185372B62B4B6008AE81D /* Huawei.mp3 */,
+				E3B185382B62B4B6008AE81D /* Poco.mp3 */,
 				45C76BA62B4DD94000B94177 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -177,6 +204,12 @@
 			files = (
 				45C76BA72B4DD94000B94177 /* Preview Assets.xcassets in Resources */,
 				45C76BA32B4DD94000B94177 /* Assets.xcassets in Resources */,
+				E3B1853B2B62B4B6008AE81D /* Poco.mp3 in Resources */,
+				E3B185402B62B4EC008AE81D /* Huawei.mp3 in Resources */,
+				E3B185412B62B4EC008AE81D /* Astronaut.mp3 in Resources */,
+				E3B1853F2B62B4EC008AE81D /* Poco.mp3 in Resources */,
+				E3B185392B62B4B6008AE81D /* Astronaut.mp3 in Resources */,
+				E3B1853A2B62B4B6008AE81D /* Huawei.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C76BB42B4DFA0B00B94177 /* DateHolder.swift in Sources */,
+				45C65D3D2B5071CA00F166BC /* MotionManager.swift in Sources */,
 				45C76B9A2B4DD94000B94177 /* Reminders_AppApp.swift in Sources */,
 				45C76B9F2B4DD94000B94177 /* Reminders_App.xcdatamodeld in Sources */,
 				45195F462B4E06010042B8AA /* ReminderCell.swift in Sources */,
@@ -196,7 +230,7 @@
 				45C76BB22B4DDEC900B94177 /* ReminderEditView.swift in Sources */,
 				45195F4B2B4E09DA0042B8AA /* ReminderItemExtension.swift in Sources */,
 				45C76BAF2B4DDDE800B94177 /* FloatingButton.swift in Sources */,
-				45195F512B4E2B110042B8AA /* ReminderManager.swift in Sources */,
+				45C65D3B2B4F5FC300F166BC /* ReminderManager.swift in Sources */,
 				45C76BA12B4DD94000B94177 /* ReminderListView.swift in Sources */,
 				45C76B9C2B4DD94000B94177 /* Persistence.swift in Sources */,
 			);
@@ -325,7 +359,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Reminders App/Reminders_App.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Reminders App/Preview Content\"";
@@ -363,7 +396,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Reminders App/Reminders_App.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Reminders App/Preview Content\"";

@@ -6,6 +6,7 @@
 
 import SwiftUI
 
+// CheckBoxView struct'ı, hatırlatıcı durumunu gösteren onay kutusu görünümü
 struct CheckBoxView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
@@ -14,6 +15,7 @@ struct CheckBoxView: View {
     
     var body: some View {
         
+         // Hatırlatıcı durumuna göre onay kutusu simgesi
         Image(systemName: passedReminderItem.completedDate != nil ? "checkmark.circle.fill" : "circle")
             .foregroundColor(passedReminderItem.isCompleted() ? .green : .secondary)
             .onTapGesture {
@@ -22,13 +24,19 @@ struct CheckBoxView: View {
                     if !passedReminderItem.isCompleted(){
                         
                         passedReminderItem.completedDate = Date()
-                        dateHolder.saveContext(viewContext)
+                        
+                    } else {
+                        
+                        passedReminderItem.completedDate = nil
                     }
+                    
+                    dateHolder.saveContext(viewContext)
                 }
             }
+        
     }
 }
-
+// Önizleme bölümü
 struct CheckBoxView_Previews: PreviewProvider {
     
     static var previews: some View{
@@ -37,4 +45,3 @@ struct CheckBoxView_Previews: PreviewProvider {
     }
     
 }
-

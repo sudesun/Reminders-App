@@ -7,15 +7,21 @@
 import SwiftUI
 import CoreData
 
+// ReminderListView struct'ı, hatırlatıcı listesini görüntüler
 struct ReminderListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var dateHolder: DateHolder
-
+    
+     // CoreData'den hatırlatıcı öğelerini almak için kullanılan fetched results
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \ReminderItem.dueDate, ascending: true)],
         animation: .default)
     private var items: FetchedResults<ReminderItem>
+    
+     // Seçilen filtreleme türünü tutan değişken
+    @State private var selectedFilter: ReminderFilter = .All
 
+     // Görünüm yapısı
     var body: some View {
         NavigationView {
             
@@ -23,9 +29,10 @@ struct ReminderListView: View {
                 
                 ZStack {
                     
+                     // Hatırlatıcı öğelerini listeler
                     List {
                         
-                        ForEach(items) { reminderItem in
+                        ForEach(selectedFilter.filteredReminderItems(items: items)) { reminderItem in
                             NavigationLink(destination: ReminderEditView( passedReminderItem: reminderItem, initialDate: Date())
                                 .environmentObject(dateHolder)){
                                     
@@ -36,13 +43,22 @@ struct ReminderListView: View {
                         .onDelete(perform: deleteItems)
                     }
                     .toolbar {
-#if os(iOS)
+                        
+                         // Filtreleme seçeneklerini gösteren toolbar
                         ToolbarItem(placement: .navigationBarTrailing) {
-                            EditButton()
+                            Picker("Filter", selection: $selectedFilter){
+                                
+                                ForEach (ReminderFilter.allFilters, id: \.self){
+                                    filter in
+                                    Text(filter.rawValue)
+                                }
+                            }
                         }
-#endif
+                        
                     }
+                    .navigationBarTitle("Reminders")
                     
+                     // Yeni hatırlatıcı ekranına yönlendiren kayan düğme
                     FloatingButton()
                         .environmentObject(dateHolder)
                 }
@@ -51,6 +67,7 @@ struct ReminderListView: View {
         }
     }
 
+     // CoreData context'ine değişiklikleri kaydeden işlem
     func saveContext(_ context: NSManagedObjectContext) {
         do {
             try context.save()
@@ -60,16 +77,18 @@ struct ReminderListView: View {
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
-    
+     
+     // Hatırlatıcı öğelerini silen işlem
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            offsets.map { selectedFilter.filteredReminderItems(items: items)[$0] }.forEach(viewContext.delete)
 
             dateHolder.saveContext(viewContext)
         }
     }
 }
 
+// DateFormatter nesnesi
 private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
@@ -77,6 +96,7 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
+// Önizleme bölümü
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {

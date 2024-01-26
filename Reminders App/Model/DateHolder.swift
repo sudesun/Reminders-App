@@ -2,19 +2,20 @@
 //  DateHolder.swift
 //  Reminders App
 //
-//  Created by Ekrem Taha SUNGUR on 10.01.2024.
-//
 
 import SwiftUI
 import CoreData
 
+// DateHolder sınıfı, CoreData context'ini kaydetmek için kullanılır.
 class DateHolder: ObservableObject {
     
+     // Başlatıcı
     init(_ context: NSManagedObjectContext){
-        
+         // İlgili başlatıcı kodları buraya ekleyebilirsiniz.
         
     }
     
+     // CoreData context'ini kaydeden işlem
     func saveContext(_ context: NSManagedObjectContext) {
         do {
             try context.save()

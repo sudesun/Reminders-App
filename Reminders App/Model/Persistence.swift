@@ -2,8 +2,6 @@
 //  Persistence.swift
 //  Reminders App
 //
-//  Created by Ekrem Taha SUNGUR on 9.01.2024.
-//
 
 import CoreData
 
