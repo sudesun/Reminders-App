@@ -5,29 +5,12 @@
 //
 
 import SwiftUI
-import CoreData
-import UserNotifications
-import AVFoundation
 
 @main
 struct Reminders_AppApp: App {
-
-    let persistenceController = PersistenceController.shared
-    var player: AVAudioPlayer?
     
-    init() {
-        
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge] ) { granted, error in
-        
-            if granted {
-                print ("Bildirim izni verildi")
-            } else if let error = error {
-                print ("Bildirim izni hatası: \(error.localizedDescription)")
-            }
-        }
-        
-      
-    }
+    let notificationCenter = UNUserNotificationCenter.current()
+    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {

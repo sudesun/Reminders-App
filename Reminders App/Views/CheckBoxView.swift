@@ -22,16 +22,10 @@ struct CheckBoxView: View {
                     if !passedReminderItem.isCompleted(){
                         
                         passedReminderItem.completedDate = Date()
-                        
-                    } else {
-                        
-                        passedReminderItem.completedDate = nil
+                        dateHolder.saveContext(viewContext)
                     }
-                    
-                    dateHolder.saveContext(viewContext)
                 }
             }
-        
     }
 }
 
@@ -43,3 +37,4 @@ struct CheckBoxView_Previews: PreviewProvider {
     }
     
 }
+

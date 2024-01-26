@@ -5,13 +5,11 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct ReminderCell: View {
     
     @EnvironmentObject var dateHolder: DateHolder
     @ObservedObject var passedReminderItem: ReminderItem
-
     
     var body: some View {
         
@@ -20,19 +18,8 @@ struct ReminderCell: View {
             CheckBoxView(passedReminderItem: passedReminderItem)
                 .environmentObject(dateHolder)
             
-            VStack(alignment: .leading){
-                Text(passedReminderItem.name ??  "")
-                    .padding(.horizontal)
-                   
-                
-                
-                if let desc = passedReminderItem.desc, !desc.isEmpty {
-                    Text(desc)
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                        .padding(.horizontal)
-                }
-            }
+            Text(passedReminderItem.name ?? "")
+                .padding(.horizontal)
             
             if !passedReminderItem.isCompleted() && passedReminderItem.scheduleTime{
                 

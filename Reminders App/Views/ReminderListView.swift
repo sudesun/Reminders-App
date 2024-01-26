@@ -10,14 +10,11 @@ import CoreData
 struct ReminderListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var dateHolder: DateHolder
-    
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \ReminderItem.dueDate, ascending: true)],
         animation: .default)
     private var items: FetchedResults<ReminderItem>
-    
-    @State private var selectedFilter: ReminderFilter = .All
 
     var body: some View {
         NavigationView {
@@ -28,7 +25,7 @@ struct ReminderListView: View {
                     
                     List {
                         
-                        ForEach(selectedFilter.filteredReminderItems(items: items)) { reminderItem in
+                        ForEach(items) { reminderItem in
                             NavigationLink(destination: ReminderEditView( passedReminderItem: reminderItem, initialDate: Date())
                                 .environmentObject(dateHolder)){
                                     
@@ -39,19 +36,12 @@ struct ReminderListView: View {
                         .onDelete(perform: deleteItems)
                     }
                     .toolbar {
-                        
+#if os(iOS)
                         ToolbarItem(placement: .navigationBarTrailing) {
-                            Picker("Filter", selection: $selectedFilter){
-                                
-                                ForEach (ReminderFilter.allFilters, id: \.self){
-                                    filter in
-                                    Text(filter.rawValue)
-                                }
-                            }
+                            EditButton()
                         }
-                        
+#endif
                     }
-                    .navigationBarTitle("Reminders")
                     
                     FloatingButton()
                         .environmentObject(dateHolder)
@@ -73,7 +63,7 @@ struct ReminderListView: View {
     
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { selectedFilter.filteredReminderItems(items: items)[$0] }.forEach(viewContext.delete)
+            offsets.map { items[$0] }.forEach(viewContext.delete)
 
             dateHolder.saveContext(viewContext)
         }
